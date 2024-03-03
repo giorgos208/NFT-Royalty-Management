@@ -42,6 +42,12 @@ To use this repository:
    truffle run verify RoyaltyNFT --network sepolia
    ```
 
+6. **Get flattened version of contract**:
+
+   ```shell
+    sol-merger contracts/RoyaltyNFT.sol ./flattened
+   ```
+
 Please ensure you have Truffle installed globally on your machine, and have filled a .env file with these information:
  ```shell
  MNEMONIC = 

@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >= 0.7.0 < 0.9.0;
 
-import "../node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 
 contract RoyaltyNFT is ERC721Enumerable, Ownable {
 
@@ -28,7 +29,7 @@ contract RoyaltyNFT is ERC721Enumerable, Ownable {
 
     Skill[] private skills;
 
-    constructor() ERC721("ROYALTY MANAGEMENT", "RMN") { //No need for constructor variables
+      constructor() ERC721("ROYALTY MANAGEMENT", "RMN") Ownable(msg.sender) {
     }
 
     function getSkill(uint256 id) public view returns (

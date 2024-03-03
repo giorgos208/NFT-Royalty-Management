@@ -36,6 +36,12 @@ To use this repository:
    truffle migrate --network sepolia
    ```
 
+5. **Verify contract if deployed**:
+
+   ```shell
+   truffle run verify RoyaltyNFT --network sepolia
+   ```
+
 Please ensure you have Truffle installed globally on your machine, and have filled a .env file with these information:
  ```shell
  MNEMONIC = 
